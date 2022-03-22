@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music Webpage</title>
+	<link rel="stylesheet" type="text/css" href="https://drive.google.com/file/d/1DfkGRMLMpxdHnO3L2g-dy3ps3wpyPEak/view?usp=sharing">
+</head>
+<body>
+   <div class="container">
+   	   <div class="navbar">
+   	   	<img src="logo.png" alt="logo" id="icon1">
+   	   	<ul>
+   	   		<li><a href="#">HOME</a></li>
+   	   		<li><a href="#">ABOUT</a></li>
+   	   		<li><a href="#">SPECIFICATIONS</a></li>
+   	   		<li><a href="#">PRODUCTS</a></li>
+   	   		<li><a href="#">CONNECT</a></li>
+   	   	</ul>
+   	   </div>
+
+   	   <div class="left">
+   	   		<h1>The<br>Real<br>Sound</h1>
+   	   </div>
+
+   	   <div class="right">
+   	   		<p>Click here to Listen</p>
+   	   		<img src="play.png" id="icon">
+   	   </div>
+   </div>
+   <audio id="mySong">
+
+        <source src="Naan Pizhai.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        var mySong = document.getElementById ("mySong");
+        var icon  = document.getElementById ("icon");
+
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src="pause.png";
+            } else{
+                mySong.pause();
+                icon.src="play.png";
+            }
+        }
+    </script>
+</body>
+</html>
